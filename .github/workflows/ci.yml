@@ -13,6 +13,8 @@ jobs:
       AX_SCREENSHOTS: '1'
     steps:
       - uses: actions/checkout@v4
+      # The Playwright image lacks unzip, which setup-bun needs.
+      - run: apt-get update && apt-get install -y --no-install-recommends unzip
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: '1.3.14'
