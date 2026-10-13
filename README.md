@@ -13,6 +13,9 @@ bun add --dev 'github:blunderon/ax#v0.1.0' playwright-core
 npm install --save-dev 'github:blunderon/ax#v0.1.0' playwright-core
 ```
 
+With npm 12+, add `--allow-git=root` to the install command (git dependencies
+are opt-in; see [npm install](https://docs.npmjs.com/cli/install/#allow-git)).
+
 Use the same `playwright-core` version as your `@playwright/test` version. Node
 20+ and Bun are supported. Committed `dist/` contains ESM JavaScript and TypeScript
 declarations; consumers do not run a build or install this repo's devDependencies.
