@@ -1,0 +1,24 @@
+main "Fixture"
+  heading "Access" level=1
+    StaticText "Access"
+  button "Invisible label" focusable=true invalid="false"
+    StaticText "Invisible label"
+  button "Disabled" disabled=true invalid="false"
+    StaticText "Disabled"
+  button "Toggle" focusable=true invalid="false" pressed="true"
+    StaticText "Toggle"
+  checkbox "Check" checked="true" focusable=true invalid="false"
+  textbox "Message" editable="plaintext" focusable=true invalid="false" multiline=false readonly=false required=false settable=true value="seed"
+    generic editable="plaintext"
+      StaticText "seed" editable="plaintext"
+  status atomic=true live="polite" relevant="additions text"
+    StaticText "Ready"
+  grid "Board" multiselectable=false readonly=false
+    row "a1 b1"
+      gridcell "a1" focusable=true invalid="false" readonly=false required=false selected=true
+        StaticText "Rook"
+      gridcell "b1" focusable=true invalid="false" readonly=false required=false
+        StaticText "Knight"
+  generic
+    button "Shadow" focusable=true invalid="false"
+      StaticText "Shadow"

@@ -1,0 +1,5 @@
+dialog "Promotion" focusable=true modal=true
+  button "Queen" focusable=true focused=true invalid="false"
+    StaticText "Queen"
+  alert atomic=true live="assertive" relevant="additions text"
+    StaticText "Choose a piece"

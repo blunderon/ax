@@ -1,0 +1,45 @@
+{
+  "name": "@blunderon/ax",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chrome accessibility tree snapshots and input for Playwright",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blunderon/ax.git"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "playwright test",
+    "lint": "biome check .",
+    "ci": "bun run lint && bun run typecheck && bun run build && bun run test",
+    "test:container": "bash scripts/test-container.sh",
+    "snapshots:update": "bash scripts/test-container.sh --update-snapshots"
+  },
+  "peerDependencies": {
+    "playwright-core": ">=1.51.0 <2"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.0",
+    "playwright-core": "1.64.0",
+    "typescript": "^5.9.3",
+    "@types/node": "^22.0.0",
+    "@biomejs/biome": "2.5.15"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

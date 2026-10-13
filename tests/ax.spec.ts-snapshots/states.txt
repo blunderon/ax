@@ -1,0 +1,8 @@
+main "States"
+  button "A \"quote\"" description="Help" focusable=true invalid="false" pressed="mixed"
+    StaticText "A \"quote\""
+  checkbox "Mixed" checked="mixed" focusable=true
+    StaticText "Mixed"
+  progressbar "Progress" value=25 valuemax=100 valuemin=0 valuetext=""
+  paragraph
+    StaticText "A long line of text that wraps across a narrow viewport but has the same semantic content."
